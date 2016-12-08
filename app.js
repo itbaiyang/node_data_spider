@@ -1,12 +1,12 @@
-var $ = require('jquery')
-var md5 = require('md5')
-var MongoClient = require('mongodb').MongoClient
+const $ = require('jquery')
+const md5 = require('md5')
+const MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
-var config = require('./config')
-user = config[0];
-token = config[1];
-api_url = 'https://data.api.zhironghao.com/query/'
-var url = 'mongodb://localhost:27017/spider_02';
+const config = require('./config')
+const user = config[0];
+const token = config[1];
+const api_url = config[3];
+const url = 'mongodb://localhost:27017/spider_02';
 
 MongoClient.connect(url, function(err, db) {
   	assert.equal(null, err);
